@@ -1,0 +1,741 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "helvetica", sans-serif;
+  
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #2f3e46;
+  z-index: 100;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar base styles */
+.navbar {
+  display: flex;
+  justify-content: flex-end; /* Align navbar to the right on larger screens */
+  background-color: #344e41;
+  padding: 5px 10px; /* Reduce padding for better spacing */
+}
+
+.nav-links {
+  display: flex;
+  gap: 5px; /* Reduce space between links */
+  list-style: none;
+  flex-wrap: nowrap; /* Prevent wrapping by default */
+}
+
+.navbar a {
+  padding: 5px 10px; /* Reduce padding for better spacing */
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px; /* Set a consistent font size */
+}
+
+.navbar a:hover {
+  color: #cad2c5;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: center; /* Center the navbar */
+    padding: 5px; /* Reduce padding for smaller screens */
+  }
+
+  .nav-links {
+    justify-content: center; /* Center links */
+    gap: 3px; /* Reduce space between links */
+  }
+
+  .nav-links a {
+    padding: 5px 8px; /* Reduce padding for smaller screens */
+    font-size: 12px; /* Reduce font size for mobile */
+  }
+
+  .nav-links {
+    flex-wrap: wrap; /* Allow wrapping only when absolutely necessary */
+  }
+}
+
+/* New code: Adjust navbar position for larger screens */
+@media (min-width: 769px) { /* Ensure this media query applies only to larger screens */
+  .navbar {
+    justify-content: flex-end; /* Align navbar to the right */
+  }
+}
+
+
+/* Section Background Colors */
+.penguins, .intro, .ice-mass, .help {
+  background-color: #ffffff; /* Light grey background color from your example */
+  color: #000; /* Set text color */
+  padding: 20px; /* Add some padding for better spacing */
+}
+
+/* Ensure background color is maintained on mobile devices */
+@media (max-width: 768px) {
+  .penguins, .intro, .ice-mass, .help {
+    background-color: #ffffff; /* Explicitly set background color */
+    color: #000; /* Explicitly set text color */
+    padding: 20px; /* Add padding for better spacing */
+  }
+}
+
+
+.homepage {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background: url("https://getwallpapers.com/wallpaper/full/4/4/5/696369-free-download-antarctica-wallpaper-1920x1200.jpg");
+  background-position: center;
+  background-size: cover;
+  overflow: hidden; /* Prevents horizontal scrolling */
+}
+
+@media (max-width: 768px) {
+  /* Only on mobile devices, prevent horizontal scrolling */
+  body {
+    overflow-x: hidden; /* Stops horizontal scrolling on small screens */
+  }
+
+  .homepage {
+    background-size: cover; /* Ensures the image covers the viewport on small screens */
+    background-position: center center; /* Keeps the image centered */
+  }
+}
+
+@media (min-width: 769px) {
+  /* For larger screens, allow normal scrolling behavior */
+  body {
+    overflow-x: visible; /* Reverts to default behavior on larger screens */
+  }
+}
+
+.homepage::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.homepage .content {
+  position: relative;
+  flex-direction: column;
+  height: 85%; 
+  justify-content: center;
+  display: flex; /* Ensure the text and other content are aligned properly */
+  align-items: center; /* Center content horizontally */
+  text-align: center; /* Center text */
+}
+
+.homepage .text {
+  color: white;  
+  text-align: center;
+  padding: 0 20px; /* Add padding to prevent text from touching the edges on mobile */
+}
+
+.homepage .text h1 {
+  font-size: 50px; /* Adjust size for smaller screens */
+  font-weight: 700;
+  text-shadow: 1px 1.5px black;
+  padding-top: 70px;
+  margin-bottom: 10px;
+}
+
+.homepage .text p {
+  font-style: italic;
+  text-shadow: 1px 1px black;
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  /* Adjust content positioning and font sizes for mobile */
+  .homepage .text h1 {
+    font-size: 30px; /* Smaller title on mobile */
+    padding-top: 20px; /* Reduce padding for smaller screens */
+  }
+
+  .homepage .text p {
+    font-size: 20px; /* Smaller text on mobile */
+    padding: 0 10px; /* Adjust padding for better readability */
+  }
+
+  .homepage .content {
+    height: 90%; /* Ensure the content takes up more of the screen */
+    justify-content: center; /* Center the content vertically */
+  }
+}
+
+@media (min-width: 769px) {
+  /* Ensure the content looks good on larger screens */
+  .homepage .content {
+    height: 85%;
+  }
+}
+
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+section h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 50px;
+}
+
+
+.intro h2 {
+  text-align: center;
+  color: #344e41;
+}
+
+.intro .section-title {
+  justify-content: flex-start;
+  padding: 20px 20px;
+}
+
+img {
+  height: auto;
+  width: 400px;
+}
+
+.intro p {
+  text-align: center;
+  color: #582f0e;
+  font-weight: 520;
+  font-size: 20px;
+}
+
+/* INTRO Section Styles for Mobile */
+@media (max-width: 768px) {
+  .intro h2 {
+    font-size: calc(18px + 2vw); /* Responsive font size */
+    text-align: center; /* Ensure heading is centered */
+    color: #344e41; /* Keep the color same */
+    white-space: normal; /* Allow wrapping */
+  }
+
+  .intro .section-title {
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
+
+  .intro p {
+    text-align: center;
+    color: #582f0e; /* Keep the color same */
+    font-weight: 520;
+    font-size: calc(12px + 1.5vw); /* Responsive font size */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 90%; /* Ensure it doesn't take up too much space */
+    line-height: 1.5; /* Improve readability */
+  }
+
+  .intro img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 20px auto; /* Center the image */
+  }
+
+  .container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+}
+
+
+.penguins {
+  background: #c5c8a8;
+  padding: 20px;
+}
+
+.penguins h2 {
+  text-align: center;
+  text-shadow: 1px 1.2px black;
+  margin-top: 20px;
+  color: white;
+}
+
+.penguins .section-title {
+  justify-content: flex-start;
+  padding: 20px 20px;
+}
+
+
+.penguins p {
+  text-align: center;
+  color: #582f0e;
+  font-weight: 520;
+  font-size: 20px;
+}
+
+.penguins .container {
+  flex-direction: row-reverse;
+}
+
+
+.dv {
+  margin: 30px auto; 
+  width: 80%; 
+  height: 500px; 
+  display: block; 
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .dv {
+    width: 100%; /* Ensure full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+  }
+}
+
+
+
+.SRC a {
+  text-decoration: none;
+  font-weight: bold; 
+  margin: 20px;
+  color: #31572c;
+  text-align: center;
+  font-size: 20px;
+}
+
+.SRC a:hover{
+  color: #432818;
+}
+
+.SRC {
+  display: flex;          
+  justify-content: center; 
+  margin: 40px auto;      
+}
+
+
+/* PENGUINS Section Styles for Mobile */
+@media (max-width: 768px) {
+  .penguins h2 {
+    font-size: calc(16px + 2vw); /* Responsive font size */
+    text-align: center; /* Ensure heading is centered */
+    color: white;
+    white-space: normal; /* Allow wrapping */
+    text-shadow: 1px 1.2px black;
+    margin-top: 20px;
+  }
+
+  .penguins .section-title {
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
+
+  .penguins p {
+    text-align: center;
+    color: #582f0e; /* Keep the color same */
+    font-weight: 520;
+    font-size: calc(12px + 1.5vw); /* Responsive font size */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 90%; /* Ensure it doesn't take up too much space */
+    line-height: 1.4; /* Improve readability */
+  }
+
+  .penguins img {
+    width: 45%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 10px auto; /* Center the image */
+    order: 1; /* Ensure image is first */
+  }
+
+  .penguins .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center elements */
+  }
+
+  .dv {
+    width: 100%; /* Make the embedment responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; 
+    margin: 20px auto; /* Center the embedment */
+  }
+}
+
+
+.ice-mass h2 {
+  text-align: center;
+  color: #344e41;
+}
+
+.ice-mass .section-title {
+  justify-content: flex-start;
+  padding: 20px 20px;
+}
+
+.ice-mass p {
+  text-align: center;
+  color: #582f0e;
+  font-weight: 520;
+  font-size: 20px;
+}
+
+
+/* ICE MASS Section Styles for Mobile */
+@media (max-width: 768px) {
+  .ice-mass h2 {
+    font-size: calc(16px + 2vw); /* Responsive font size */
+    text-align: center; /* Ensure heading is centered */
+    color: #344e41; /* Keep the color same */
+    white-space: normal; /* Allow wrapping */
+    margin-top: 20px;
+  }
+
+  .ice-mass .section-title {
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
+
+  .ice-mass p {
+    text-align: center;
+    color: #582f0e; /* Keep the color same */
+    font-weight: 520;
+    font-size: calc(10px + 1.2vw); /* Responsive font size */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 90%; /* Ensure it doesn't take up too much space */
+    line-height: 1.4; /* Improve readability */
+  }
+
+  .ice-mass img {
+    width: 45%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 10px auto; /* Center the image */
+    order: 1; /* Ensure image is first */
+  }
+
+  .ice-mass .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center elements */
+  }
+
+  .dv {
+    width: 100%; /* Make the embedment responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; 
+    margin: 20px auto; /* Center the embedment */
+  }
+}
+
+
+.ozone-levels {
+  background: #c5c8a8;
+  padding: 20px;
+}
+
+.ozone-levels h2 {
+  text-align: center;
+  text-shadow: 1px 1.2px black;
+  margin-top: 20px;
+  color: white;
+}
+
+.ozone-levels .section-title {
+  justify-content: flex-start;
+  padding: 20px 20px;
+}
+
+.ozone-levels p {
+  text-align: center;
+  color: #582f0e;
+  font-weight: 520;
+  font-size: 20px;
+}
+
+.ozone-levels .container {
+  flex-direction: row-reverse;
+}
+
+/* OZONE LEVELS Section Styles for Mobile */
+@media (max-width: 768px) {
+  .ozone-levels h2 {
+    font-size: calc(16px + 2vw); /* Responsive font size */
+    text-align: center; /* Ensure heading is centered */
+    color: white;
+    white-space: normal; /* Allow wrapping */
+    text-shadow: 1px 1.2px black;
+    margin-top: 20px;
+  }
+
+  .ozone-levels .section-title {
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
+
+  .ozone-levels p {
+    text-align: center;
+    color: #582f0e; /* Keep the color same */
+    font-weight: 520;
+    font-size: calc(10px + 1.2vw); /* Responsive font size */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 90%; /* Ensure it doesn't take up too much space */
+    line-height: 1.4; /* Improve readability */
+  }
+
+  .ozone-levels img {
+    width: 45%; /* Adjust image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+    margin: 10px auto; /* Center the image */
+    order: 1; /* Ensure image is first */
+  }
+
+  .ozone-levels .container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically on small screens */
+    align-items: center; /* Center elements */
+  }
+
+  .dv {
+    width: 100%; /* Make the embedment responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; 
+    margin: 20px auto; /* Center the embedment */
+  }
+}
+
+/* Global Footer Styles */
+.footer {
+  background-color: #c5c8a8; /* Ensure background color is set */
+  text-align: center;
+  width: 100%; /* Ensure the background covers the full width */
+  padding: 20px 0; /* Add padding */
+}
+
+.footer p {
+  font-size: 15px;
+  margin: 0;
+  padding: 10px 0; /* Add padding to ensure the text is centered within the green section */
+  background-color: #c5c8a8; /* Apply background color to the paragraph as well */
+}
+
+/* Footer Section Styles for Mobile */
+@media (max-width: 768px) {
+  .footer {
+    background: #c5c8a8;
+    padding: 20px; /* Add padding */
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 15px;
+    margin: 0;
+  }
+}
+
+/* Footer Section Styles for Mobile */
+@media (max-width: 768px) {
+  .footer {
+    background-color: #c5c8a8; /* Ensure background color is set */
+    padding: 20px; /* Add padding */
+    text-align: center;
+    width: 100%; /* Ensure the background covers the full width */
+  }
+
+  .footer p {
+    font-size: 15px;
+    margin: 0;
+    padding: 10px 0; /* Add padding to ensure the text is centered within the green section */
+  }
+}
+
+.help h2 {
+  text-align: center;
+  color: #344e41;
+}
+
+.help .section-title {
+  justify-content: flex-start;
+  padding: 20px 20px;
+}
+
+.help p {
+  text-align: center;
+  color: #582f0e;
+  font-weight: 520;
+  font-size: 20px;
+}
+
+.help a {
+  text-decoration: none;
+  font-weight: bold; 
+  margin: 20px;
+  color: #31572c;
+  text-align: center;
+  font-size: 20px;
+}
+
+.help a:hover{
+  color: #432818;
+}
+
+section .card img {
+  height: 240px;
+  width: 100%;
+}
+
+.card h3{
+  color: #344e41;
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+.card p{
+  padding-bottom: 20px;
+}
+
+section .cards {
+  display: flex;
+  margin-top: 50px;
+  justify-content: space-between;
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+}
+
+section .card {
+  text-align: center;
+  list-style: none;
+  width: calc(100% / 3 - 30px);
+  background-color: #fff;
+  padding: 40px 18px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+  flex-shrink: 1; /* Allow the cards to shrink to fit */
+}
+
+/* HELP Section Card Styles for Mobile */
+@media (max-width: 768px) {
+
+  .help h2 {
+    font-size: calc(16px + 2vw); /* Responsive font size */
+    text-align: center; /* Ensure heading is centered */
+    color: #344e41;
+    white-space: normal; /* Allow wrapping */
+    margin-top: 20px;
+  }
+
+  .help .section-title {
+    justify-content: flex-start;
+    padding: 20px 10px;
+  }
+
+  .help p {
+    text-align: center;
+    color: #582f0e; /* Keep the color same */
+    font-weight: 520;
+    font-size: calc(10px + 1.2vw); /* Responsive font size */
+    margin: 0 auto; /* Center the paragraph */
+    max-width: 90%; /* Ensure it doesn't take up too much space */
+    line-height: 1.4; /* Improve readability */
+  }
+
+  .cards {
+    display: flex; /* Ensure cards are in a single row */
+    flex-wrap: nowrap; /* Prevent wrapping to the next line */
+    justify-content: space-between; /* Space cards evenly */
+  }
+
+  .card {
+    flex: 1 0 30%; /* Make cards flexible and responsive */
+    max-width: 30%; /* Set a maximum width */
+    margin: 5px; /* Add margin between cards */
+    padding: 10px; /* Adjust padding */
+    box-sizing: border-box; /* Ensure padding is included in width/height */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    height: auto; /* Adjust height for dynamic resizing */
+    flex-shrink: 1; /* Allow the cards to shrink to fit */
+    align-items: center; /* Center the content */
+  }
+
+  .card img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add margin below image */
+  }
+
+  .card h3 {
+    font-size: calc(8px + 1vw); /* Smaller responsive font size */
+    color: #344e41;
+    padding: 10px 0; /* Adjust padding */
+  }
+
+  .card p {
+    font-size: calc(6px + 0.8vw); /* Smaller responsive font size */
+    line-height: 1.2; /* Improve readability */
+    margin: 0; /* Remove default margin */
+    max-height: none; /* Allow full height for text */
+    overflow: visible; /* Ensure all text is visible */
+  }
+
+  .help a {
+    font-size: calc(8px + 1vw); /* Smaller responsive font size */
+  }
+}
+
+
+/* General styles for embeds */
+.dv {
+  margin: 30px auto; 
+  width: 80%; 
+  height: 500px; 
+  display: block; 
+  max-width: 100%; /* Ensure it does not exceed screen width */
+  aspect-ratio: 16/9; /* Maintain the aspect ratio */
+}
+
+/* Ensure responsiveness on smaller screens */
+@media (max-width: 768px) {
+  .dv {
+    width: 100%; /* Ensure full width on smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+  }
+}
+
+/* Hide the object tag initially */
+#lookerObject {
+  display: none; /* Hide the object tag initially */
+}
+
+/* Show the object tag if iframe fails (CSS only workaround) */
+#lookerIframe:empty ~ #lookerObject {
+  display: block; /* Show the object tag */
+}
