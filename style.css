@@ -9,7 +9,7 @@
 html, body {
   height: 100%;
   width: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden; 
 }
 
 header {
@@ -26,7 +26,6 @@ header {
   align-items: center;
 }
 
-
 .container {
   max-width: 1200px;
   width: 100%;
@@ -34,79 +33,72 @@ header {
   padding: 0 20px;
 }
 
-/* Navbar base styles */
 .navbar {
   display: flex;
-  justify-content: flex-end; /* Align navbar to the right on larger screens */
-  background-color: #344e41;
-  padding: 5px 10px; /* Reduce padding for better spacing */
+  justify-content: flex-end; 
+  background-color: #2f3e46;
+  padding: 5px 10px; 
 }
 
 .nav-links {
   display: flex;
-  gap: 5px; /* Reduce space between links */
+  gap: 5px; 
   list-style: none;
-  flex-wrap: nowrap; /* Prevent wrapping by default */
+  flex-wrap: nowrap; 
 }
 
 .navbar a {
-  padding: 5px 10px; /* Reduce padding for better spacing */
+  padding: 5px 10px; 
   display: inline-block;
   color: #fff;
   text-decoration: none;
-  font-size: 14px; /* Set a consistent font size */
+  font-size: 14px; 
 }
 
 .navbar a:hover {
   color: #cad2c5;
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .navbar {
-    justify-content: center; /* Center the navbar */
-    padding: 5px; /* Reduce padding for smaller screens */
+    justify-content: center; 
+    padding: 5px; 
   }
 
   .nav-links {
-    justify-content: center; /* Center links */
-    gap: 3px; /* Reduce space between links */
+    justify-content: center; 
+    gap: 3px; 
   }
 
   .nav-links a {
-    padding: 5px 8px; /* Reduce padding for smaller screens */
-    font-size: 12px; /* Reduce font size for mobile */
+    padding: 5px 8px; 
+    font-size: 12px; 
   }
 
   .nav-links {
-    flex-wrap: wrap; /* Allow wrapping only when absolutely necessary */
+    flex-wrap: wrap; 
   }
 }
 
-/* New code: Adjust navbar position for larger screens */
-@media (min-width: 769px) { /* Ensure this media query applies only to larger screens */
+@media (min-width: 769px) { 
   .navbar {
-    justify-content: flex-end; /* Align navbar to the right */
+    justify-content: flex-end; 
   }
 }
 
-
-/* Section Background Colors */
 .penguins, .intro, .ice-mass, .help {
-  background-color: #ffffff; /* Light grey background color from your example */
-  color: #000; /* Set text color */
-  padding: 20px; /* Add some padding for better spacing */
+  background-color: #ffffff; 
+  color: #000; 
+  padding: 20px; 
 }
 
-/* Ensure background color is maintained on mobile devices */
 @media (max-width: 768px) {
   .penguins, .intro, .ice-mass, .help {
-    background-color: #ffffff; /* Explicitly set background color */
-    color: #000; /* Explicitly set text color */
-    padding: 20px; /* Add padding for better spacing */
+    background-color: #ffffff; 
+    color: #000; 
+    padding: 20px; 
   }
 }
-
 
 .homepage {
   position: relative;
@@ -115,25 +107,25 @@ header {
   background: url("https://getwallpapers.com/wallpaper/full/4/4/5/696369-free-download-antarctica-wallpaper-1920x1200.jpg");
   background-position: center;
   background-size: cover;
-  overflow: hidden; /* Prevents horizontal scrolling */
+  overflow: hidden; 
 }
 
 @media (max-width: 768px) {
-  /* Only on mobile devices, prevent horizontal scrolling */
+  
   body {
-    overflow-x: hidden; /* Stops horizontal scrolling on small screens */
+    overflow-x: hidden; 
   }
 
   .homepage {
-    background-size: cover; /* Ensures the image covers the viewport on small screens */
-    background-position: center center; /* Keeps the image centered */
+    background-size: cover; 
+    background-position: center center; 
   }
 }
 
 @media (min-width: 769px) {
-  /* For larger screens, allow normal scrolling behavior */
+  
   body {
-    overflow-x: visible; /* Reverts to default behavior on larger screens */
+    overflow-x: visible; 
   }
 }
 
@@ -152,19 +144,19 @@ header {
   flex-direction: column;
   height: 85%; 
   justify-content: center;
-  display: flex; /* Ensure the text and other content are aligned properly */
-  align-items: center; /* Center content horizontally */
-  text-align: center; /* Center text */
+  display: flex; 
+  align-items: center; 
+  text-align: center; 
 }
 
 .homepage .text {
   color: white;  
   text-align: center;
-  padding: 0 20px; /* Add padding to prevent text from touching the edges on mobile */
+  padding: 0 20px; 
 }
 
 .homepage .text h1 {
-  font-size: 50px; /* Adjust size for smaller screens */
+  font-size: 50px; 
   font-weight: 700;
   text-shadow: 1px 1.5px black;
   padding-top: 70px;
@@ -178,25 +170,25 @@ header {
 }
 
 @media (max-width: 768px) {
-  /* Adjust content positioning and font sizes for mobile */
+  
   .homepage .text h1 {
-    font-size: 30px; /* Smaller title on mobile */
-    padding-top: 20px; /* Reduce padding for smaller screens */
+    font-size: 30px; 
+    padding-top: 20px; 
   }
 
   .homepage .text p {
-    font-size: 20px; /* Smaller text on mobile */
-    padding: 0 10px; /* Adjust padding for better readability */
+    font-size: 20px; 
+    padding: 0 10px; 
   }
 
   .homepage .content {
-    height: 90%; /* Ensure the content takes up more of the screen */
-    justify-content: center; /* Center the content vertically */
+    height: 90%; 
+    justify-content: center; 
   }
 }
 
 @media (min-width: 769px) {
-  /* Ensure the content looks good on larger screens */
+  
   .homepage .content {
     height: 85%;
   }
@@ -212,7 +204,6 @@ section h2 {
   font-weight: 600;
   margin-bottom: 50px;
 }
-
 
 .intro h2 {
   text-align: center;
@@ -236,13 +227,12 @@ img {
   font-size: 20px;
 }
 
-/* INTRO Section Styles for Mobile */
 @media (max-width: 768px) {
   .intro h2 {
-    font-size: calc(18px + 2vw); /* Responsive font size */
-    text-align: center; /* Ensure heading is centered */
-    color: #344e41; /* Keep the color same */
-    white-space: normal; /* Allow wrapping */
+    font-size: calc(18px + 2vw); 
+    text-align: center; 
+    color: #344e41; 
+    white-space: normal; 
   }
 
   .intro .section-title {
@@ -252,26 +242,25 @@ img {
 
   .intro p {
     text-align: center;
-    color: #582f0e; /* Keep the color same */
+    color: #582f0e; 
     font-weight: 520;
-    font-size: calc(12px + 1.5vw); /* Responsive font size */
-    margin: 0 auto; /* Center the paragraph */
-    max-width: 90%; /* Ensure it doesn't take up too much space */
-    line-height: 1.5; /* Improve readability */
+    font-size: calc(12px + 1.5vw); 
+    margin: 0 auto; 
+    max-width: 90%; 
+    line-height: 1.5; 
   }
 
   .intro img {
-    width: 100%; /* Make image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block;
-    margin: 20px auto; /* Center the image */
+    margin: 20px auto; 
   }
 
   .container {
-    flex-direction: column; /* Stack elements vertically */
+    flex-direction: column; 
   }
 }
-
 
 .penguins {
   background: #c5c8a8;
@@ -290,7 +279,6 @@ img {
   padding: 20px 20px;
 }
 
-
 .penguins p {
   text-align: center;
   color: #582f0e;
@@ -302,7 +290,6 @@ img {
   flex-direction: row-reverse;
 }
 
-
 .dv {
   margin: 30px auto; 
   width: 80%; 
@@ -310,16 +297,13 @@ img {
   display: block; 
 }
 
-/* Responsive styles for smaller screens */
 @media (max-width: 768px) {
   .dv {
-    width: 100%; /* Ensure full width on smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block;
   }
 }
-
-
 
 .SRC a {
   text-decoration: none;
@@ -340,14 +324,12 @@ img {
   margin: 40px auto;      
 }
 
-
-/* PENGUINS Section Styles for Mobile */
 @media (max-width: 768px) {
   .penguins h2 {
-    font-size: calc(16px + 2vw); /* Responsive font size */
-    text-align: center; /* Ensure heading is centered */
+    font-size: calc(16px + 2vw); 
+    text-align: center; 
     color: white;
-    white-space: normal; /* Allow wrapping */
+    white-space: normal; 
     text-shadow: 1px 1.2px black;
     margin-top: 20px;
   }
@@ -359,36 +341,35 @@ img {
 
   .penguins p {
     text-align: center;
-    color: #582f0e; /* Keep the color same */
+    color: #582f0e; 
     font-weight: 520;
-    font-size: calc(12px + 1.5vw); /* Responsive font size */
-    margin: 0 auto; /* Center the paragraph */
-    max-width: 90%; /* Ensure it doesn't take up too much space */
-    line-height: 1.4; /* Improve readability */
+    font-size: calc(12px + 1.5vw); 
+    margin: 0 auto; 
+    max-width: 90%; 
+    line-height: 1.4; 
   }
 
   .penguins img {
-    width: 45%; /* Adjust image width */
-    height: auto; /* Maintain aspect ratio */
+    width: 45%; 
+    height: auto; 
     display: block;
-    margin: 10px auto; /* Center the image */
-    order: 1; /* Ensure image is first */
+    margin: 10px auto; 
+    order: 1; 
   }
 
   .penguins .container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: center; /* Center elements */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .dv {
-    width: 100%; /* Make the embedment responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block; 
-    margin: 20px auto; /* Center the embedment */
+    margin: 20px auto; 
   }
 }
-
 
 .ice-mass h2 {
   text-align: center;
@@ -407,14 +388,12 @@ img {
   font-size: 20px;
 }
 
-
-/* ICE MASS Section Styles for Mobile */
 @media (max-width: 768px) {
   .ice-mass h2 {
-    font-size: calc(16px + 2vw); /* Responsive font size */
-    text-align: center; /* Ensure heading is centered */
-    color: #344e41; /* Keep the color same */
-    white-space: normal; /* Allow wrapping */
+    font-size: calc(16px + 2vw); 
+    text-align: center; 
+    color: #344e41; 
+    white-space: normal; 
     margin-top: 20px;
   }
 
@@ -425,36 +404,35 @@ img {
 
   .ice-mass p {
     text-align: center;
-    color: #582f0e; /* Keep the color same */
+    color: #582f0e; 
     font-weight: 520;
-    font-size: calc(10px + 1.2vw); /* Responsive font size */
-    margin: 0 auto; /* Center the paragraph */
-    max-width: 90%; /* Ensure it doesn't take up too much space */
-    line-height: 1.4; /* Improve readability */
+    font-size: calc(10px + 1.2vw); 
+    margin: 0 auto; 
+    max-width: 90%; 
+    line-height: 1.4; 
   }
 
   .ice-mass img {
-    width: 45%; /* Adjust image width */
-    height: auto; /* Maintain aspect ratio */
+    width: 45%; 
+    height: auto; 
     display: block;
-    margin: 10px auto; /* Center the image */
-    order: 1; /* Ensure image is first */
+    margin: 10px auto; 
+    order: 1; 
   }
 
   .ice-mass .container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: center; /* Center elements */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .dv {
-    width: 100%; /* Make the embedment responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block; 
-    margin: 20px auto; /* Center the embedment */
+    margin: 20px auto; 
   }
 }
-
 
 .ozone-levels {
   background: #c5c8a8;
@@ -484,13 +462,12 @@ img {
   flex-direction: row-reverse;
 }
 
-/* OZONE LEVELS Section Styles for Mobile */
 @media (max-width: 768px) {
   .ozone-levels h2 {
-    font-size: calc(16px + 2vw); /* Responsive font size */
-    text-align: center; /* Ensure heading is centered */
+    font-size: calc(16px + 2vw); 
+    text-align: center; 
     color: white;
-    white-space: normal; /* Allow wrapping */
+    white-space: normal; 
     text-shadow: 1px 1.2px black;
     margin-top: 20px;
   }
@@ -502,56 +479,54 @@ img {
 
   .ozone-levels p {
     text-align: center;
-    color: #582f0e; /* Keep the color same */
+    color: #582f0e; 
     font-weight: 520;
-    font-size: calc(10px + 1.2vw); /* Responsive font size */
-    margin: 0 auto; /* Center the paragraph */
-    max-width: 90%; /* Ensure it doesn't take up too much space */
-    line-height: 1.4; /* Improve readability */
+    font-size: calc(10px + 1.2vw); 
+    margin: 0 auto; 
+    max-width: 90%; 
+    line-height: 1.4; 
   }
 
   .ozone-levels img {
-    width: 45%; /* Adjust image width */
-    height: auto; /* Maintain aspect ratio */
+    width: 45%; 
+    height: auto; 
     display: block;
-    margin: 10px auto; /* Center the image */
-    order: 1; /* Ensure image is first */
+    margin: 10px auto; 
+    order: 1; 
   }
 
   .ozone-levels .container {
     display: flex;
-    flex-direction: column; /* Stack elements vertically on small screens */
-    align-items: center; /* Center elements */
+    flex-direction: column; 
+    align-items: center; 
   }
 
   .dv {
-    width: 100%; /* Make the embedment responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block; 
-    margin: 20px auto; /* Center the embedment */
+    margin: 20px auto; 
   }
 }
 
-/* Global Footer Styles */
 .footer {
-  background-color: #c5c8a8; /* Ensure background color is set */
+  background-color: #c5c8a8; 
   text-align: center;
-  width: 100%; /* Ensure the background covers the full width */
-  padding: 20px 0; /* Add padding */
+  width: 100%; 
+  padding: 20px 0; 
 }
 
 .footer p {
   font-size: 15px;
   margin: 0;
-  padding: 10px 0; /* Add padding to ensure the text is centered within the green section */
-  background-color: #c5c8a8; /* Apply background color to the paragraph as well */
+  padding: 10px 0; 
+  background-color: #c5c8a8; 
 }
 
-/* Footer Section Styles for Mobile */
 @media (max-width: 768px) {
   .footer {
     background: #c5c8a8;
-    padding: 20px; /* Add padding */
+    padding: 20px; 
     text-align: center;
   }
 
@@ -561,19 +536,18 @@ img {
   }
 }
 
-/* Footer Section Styles for Mobile */
 @media (max-width: 768px) {
   .footer {
-    background-color: #c5c8a8; /* Ensure background color is set */
-    padding: 20px; /* Add padding */
+    background-color: #c5c8a8; 
+    padding: 20px; 
     text-align: center;
-    width: 100%; /* Ensure the background covers the full width */
+    width: 100%; 
   }
 
   .footer p {
     font-size: 15px;
     margin: 0;
-    padding: 10px 0; /* Add padding to ensure the text is centered within the green section */
+    padding: 10px 0; 
   }
 }
 
@@ -626,7 +600,7 @@ section .cards {
   display: flex;
   margin-top: 50px;
   justify-content: space-between;
-  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  flex-wrap: nowrap; 
 }
 
 section .card {
@@ -637,17 +611,16 @@ section .card {
   padding: 40px 18px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
   margin-bottom: 40px;
-  flex-shrink: 1; /* Allow the cards to shrink to fit */
+  flex-shrink: 1; 
 }
 
-/* HELP Section Card Styles for Mobile */
 @media (max-width: 768px) {
 
   .help h2 {
-    font-size: calc(16px + 2vw); /* Responsive font size */
-    text-align: center; /* Ensure heading is centered */
+    font-size: calc(16px + 2vw); 
+    text-align: center; 
     color: #344e41;
-    white-space: normal; /* Allow wrapping */
+    white-space: normal; 
     margin-top: 20px;
   }
 
@@ -658,84 +631,79 @@ section .card {
 
   .help p {
     text-align: center;
-    color: #582f0e; /* Keep the color same */
+    color: #582f0e; 
     font-weight: 520;
-    font-size: calc(10px + 1.2vw); /* Responsive font size */
-    margin: 0 auto; /* Center the paragraph */
-    max-width: 90%; /* Ensure it doesn't take up too much space */
-    line-height: 1.4; /* Improve readability */
+    font-size: calc(10px + 1.2vw); 
+    margin: 0 auto; 
+    max-width: 90%; 
+    line-height: 1.4; 
   }
 
   .cards {
-    display: flex; /* Ensure cards are in a single row */
-    flex-wrap: nowrap; /* Prevent wrapping to the next line */
-    justify-content: space-between; /* Space cards evenly */
+    display: flex; 
+    flex-wrap: nowrap; 
+    justify-content: space-between; 
   }
 
   .card {
-    flex: 1 0 30%; /* Make cards flexible and responsive */
-    max-width: 30%; /* Set a maximum width */
-    margin: 5px; /* Add margin between cards */
-    padding: 10px; /* Adjust padding */
-    box-sizing: border-box; /* Ensure padding is included in width/height */
+    flex: 1 0 30%; 
+    max-width: 30%; 
+    margin: 5px; 
+    padding: 10px; 
+    box-sizing: border-box; 
     display: flex;
-    flex-direction: column; /* Stack content vertically */
-    height: auto; /* Adjust height for dynamic resizing */
-    flex-shrink: 1; /* Allow the cards to shrink to fit */
-    align-items: center; /* Center the content */
+    flex-direction: column; 
+    height: auto; 
+    flex-shrink: 1; 
+    align-items: center; 
   }
 
   .card img {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Add margin below image */
+    width: 100%; 
+    height: auto; 
+    margin-bottom: 10px; 
   }
 
   .card h3 {
-    font-size: calc(8px + 1vw); /* Smaller responsive font size */
+    font-size: calc(8px + 1vw); 
     color: #344e41;
-    padding: 10px 0; /* Adjust padding */
+    padding: 10px 0; 
   }
 
   .card p {
-    font-size: calc(6px + 0.8vw); /* Smaller responsive font size */
-    line-height: 1.2; /* Improve readability */
-    margin: 0; /* Remove default margin */
-    max-height: none; /* Allow full height for text */
-    overflow: visible; /* Ensure all text is visible */
+    font-size: calc(6px + 0.8vw); 
+    line-height: 1.2; 
+    margin: 0; 
+    max-height: none; 
+    overflow: visible; 
   }
 
   .help a {
-    font-size: calc(8px + 1vw); /* Smaller responsive font size */
+    font-size: calc(8px + 1vw); 
   }
 }
 
-
-/* General styles for embeds */
 .dv {
   margin: 30px auto; 
   width: 80%; 
   height: 500px; 
   display: block; 
-  max-width: 100%; /* Ensure it does not exceed screen width */
-  aspect-ratio: 16/9; /* Maintain the aspect ratio */
+  max-width: 100%; 
+  aspect-ratio: 16/9; 
 }
 
-/* Ensure responsiveness on smaller screens */
 @media (max-width: 768px) {
   .dv {
-    width: 100%; /* Ensure full width on smaller screens */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; 
+    height: auto; 
     display: block;
   }
 }
 
-/* Hide the object tag initially */
 #lookerObject {
-  display: none; /* Hide the object tag initially */
+  display: none; 
 }
 
-/* Show the object tag if iframe fails (CSS only workaround) */
 #lookerIframe:empty ~ #lookerObject {
-  display: block; /* Show the object tag */
+  display: block; 
 }
